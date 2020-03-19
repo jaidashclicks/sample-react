@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AppBar from './common/header/AppBar';
+import Circular from './common/loader/Circular';
+import Linear from './common/loader/Linear';
+import SnackBar from './common/snackbar/SnackBar';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <React.Fragment>
+            <Circular color="secondary" variant="determinate" />
+            <Linear color="primary" variant="query" />
+            <AppBar />
+            <SnackBar
+                message="test message"
+                variant="warning"
+                vertical="top"
+                horizontal="right"
+            />
+        </React.Fragment>
+    );
 }
 
 export default App;
