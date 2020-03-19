@@ -1,3 +1,21 @@
+# Introduction
+
+This a fully featured sample create react app.
+
+# Features
+
+-   [Material UI](https://material-ui.com/)
+-   Notifications using [Notostack](https://iamhosseindhv.com/notistack/)
+-   i18n using [react i18next](https://github.com/i18next/react-i18next) . Just deine your language json messages and start using
+-   Firebase Authentications and Functions
+-   Firebase functions using express js
+-   PropType check using React Proptypes
+-   Theming and Night Mode
+-   Config variables using enviournment variables
+-   Clean and well maintened code
+-   Easy installation guide using [readme.md](readme.md)
+-   Extensive uses of [react hooks](https://reactjs.org/docs/hooks-reference.html)
+
 # Coding Style Guide
 
 Please keep following code style guide so we maintain a good quality code
