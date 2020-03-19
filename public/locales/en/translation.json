@@ -1,0 +1,20 @@
+{
+    "app_name": "Dashclicks",
+    "login": "Login",
+    "facebook": "facebook",
+    "dashboard": "Dashboard",
+    "choose_language": "Choose Language",
+    "english": "English",
+    "hindi": "Hindi",
+    "german": "German",
+    "french": "French",
+    "welcome_message": "Welcome",
+    "list": "List",
+    "add": "Add",
+    "delete": "Delete",
+    "update": "Update",
+    "no_data": "No data available",
+    "succss_message": "added successfuly",
+    "delete_message": "deleted successfuly",
+    "update_message": "updated successfuly"
+}

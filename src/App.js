@@ -1,21 +1,21 @@
-import React from 'react';
-import AppBar from './common/header/AppBar';
-import Circular from './common/loader/Circular';
-import Linear from './common/loader/Linear';
-import SnackBar from './common/snackbar/SnackBar';
+import React, { useState, useEffect } from 'react';
+import Master from './common/layout/Master';
 
+import Loading from './common/loader/CircularProgress';
 function App() {
+    const [loading, setLoading] = useState(1);
+
+    useEffect(() => {
+        // set timeout and setloading false
+        setTimeout(() => setLoading(0), 2000);
+    });
     return (
         <React.Fragment>
-            <Circular color="secondary" variant="determinate" />
-            <Linear color="primary" variant="query" />
-            <AppBar />
-            <SnackBar
-                message="test message"
-                variant="warning"
-                vertical="top"
-                horizontal="right"
-            />
+            {loading ? (
+                <Loading color="primary" variant="determinate" />
+            ) : (
+                <Master />
+            )}
         </React.Fragment>
     );
 }

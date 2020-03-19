@@ -7,10 +7,9 @@ import PropTypes from 'prop-types';
 
 const useStyles = makeStyles(theme => ({
     root: {
+        marginTop: 300,
         display: 'flex',
-        '& > * + *': {
-            marginLeft: theme.spacing(2),
-        },
+        justifyContent: 'center',
     },
 }));
 

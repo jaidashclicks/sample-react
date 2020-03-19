@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
+
 import { SnackbarProvider } from 'notistack';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Loading from './common/loader/CircularProgress';
+//initilize i18n
+import './i18n';
 
 ReactDOM.render(
-    <SnackbarProvider maxSnack={3}>
-        <App />
-    </SnackbarProvider>,
+    <Suspense fallback={<Loading />}>
+        <SnackbarProvider maxSnack={3}>
+            <App />
+        </SnackbarProvider>
+    </Suspense>,
+
     document.getElementById('root'),
 );
 

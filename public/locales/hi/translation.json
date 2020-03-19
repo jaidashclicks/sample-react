@@ -1,0 +1,20 @@
+{
+    "app_name": "डैशक्लिक्स",
+    "login": "लॉग इन",
+    "facebook": "फ़ेसबुक",
+    "dashboard": "डैशबोर्ड",
+    "choose_language": "भाषा चुनें",
+    "english": "इंग्लिश",
+    "hindi": "हिंदी",
+    "german": "जर्मन",
+    "french": "फ्रेंच",
+    "welcome_message": "स्वागत है",
+    "list": "सूची",
+    "add": "जोड़ें",
+    "delete": "हटाएं",
+    "update": "अपडेट",
+    "no_data": "कोई डेटा उपलब्ध नहीं हैe",
+    "succss_message": "सफलतापूर्वक जोड़ा गया",
+    "delete_message": "सफलतापूर्वक हटाए गए",
+    "update_message": "सफलतापूर्वक अपडेटेड किये गए"
+}
