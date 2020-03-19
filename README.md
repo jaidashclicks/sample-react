@@ -1,6 +1,6 @@
 # Introduction
 
-This a fully featured sample create react app.
+This a fully featured sample create react app. Real world application and uses scenario
 
 # Features
 
@@ -11,8 +11,8 @@ This a fully featured sample create react app.
 -   Firebase functions using express js
 -   PropType check using React Proptypes
 -   Theming and Night Mode
--   Config variables using enviournment variables
--   Clean and well maintened code
+-   Config variables using environment variables
+-   Clean and well maintained code
 -   Easy installation guide using [readme.md](readme.md)
 -   Extensive uses of [react hooks](https://reactjs.org/docs/hooks-reference.html)
 
@@ -21,7 +21,7 @@ This a fully featured sample create react app.
 Please keep following code style guide so we maintain a good quality code
 
 1. Please keep tab width 4
-2. Use semi column after the ending of each line of code
+2. Use semicolon after the ending of each line of code
 3. Use trailing comma
 4. Use single quote in string
 
@@ -44,11 +44,11 @@ create a file .prettierc in the source code directory and put following properti
 }
 ```
 
-Dont forgot to set format on save in setting of vscode.
+Don't forget to set the format on save in the setting of vscode.
 
 ### c
 
-Either install prettier package in current project or install it globally.
+Either install prettier package in the current project or install it globally.
 
 ```bash
 # in project directory
@@ -71,4 +71,23 @@ Now you can format all the source code using
  # if installed globally
  prettier --single-quote --trailing-comma=es5  --semi=true  --tab-width=4 --write "src/**/*.js"
 
+```
+
+# Installation
+
+```bash
+#yarn
+yarn  install
+
+#npm
+
+npm install
+```
+
+# Serve
+
+```bash
+yarn run start
+# Or
+npm run start
 ```
