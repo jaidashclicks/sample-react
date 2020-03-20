@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import IconButton from '@material-ui/core/IconButton';
@@ -7,9 +7,12 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Divider from '@material-ui/core/Divider';
 import { useTranslation } from 'react-i18next';
 
+import AppContext from '../../context/AppContext';
+
 export default function LanguageMenu() {
     const { t, i18n } = useTranslation();
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const { toggleLanguage } = useContext(AppContext);
 
     const handleClick = event => {
         setAnchorEl(event.currentTarget);
@@ -20,6 +23,8 @@ export default function LanguageMenu() {
     };
     const changeLanguage = lng => {
         i18n.changeLanguage(lng);
+        // update context
+        toggleLanguage(lng);
     };
 
     return (

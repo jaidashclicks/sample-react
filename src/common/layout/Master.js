@@ -1,15 +1,17 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import { useTranslation } from 'react-i18next';
 import SnackBar from '../../common/snackbar/SnackBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Appcontext from '../../context/AppContext';
+// import Appcontext from '../../context/AppContext';
 
+console.log();
 function Master() {
     const { t } = useTranslation();
-    const { nightMode, loading, isAuthenticated } = useContext(Appcontext);
-    console.log(loading, nightMode, isAuthenticated);
+
+    // const context = useContext(Appcontext);
+    // console.log('context', context);
     return (
         <React.Fragment>
             <CssBaseline />

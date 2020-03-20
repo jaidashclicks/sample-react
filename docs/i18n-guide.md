@@ -93,7 +93,7 @@ to show translated text use
 
 ```js
 import React, { Suspense } from 'react';
-const { t, i18n } = useTranslation();
+const { t } = useTranslation();
 
 t('app_name');
 ```

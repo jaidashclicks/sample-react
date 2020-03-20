@@ -9,11 +9,15 @@ import './i18n';
 // Error Boundary
 import ErrorBoundary from './errorboundary/ErrorBoundary';
 
+import LightTheme from './theme/Light';
+import DarkTheme from './theme/Night';
+// import lightTheme from './common/theme/Light';
+
 ReactDOM.render(
     <Suspense fallback={<Loading />}>
         <ErrorBoundary>
             <SnackbarProvider maxSnack={3}>
-                <App />
+                <App darkTheme={DarkTheme} lightTheme={LightTheme} />
             </SnackbarProvider>
         </ErrorBoundary>
     </Suspense>,

@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { useTranslation } from 'react-i18next';
 import LanguageMenu from './LanguageMenu';
+import ThemeMenu from './ThemeMenu';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -34,6 +35,7 @@ export default function Header() {
                         {t('app_name')}
                     </Typography>
                     <LanguageMenu />
+                    <ThemeMenu />
                     <Button color="inherit"> {t('login')}</Button>
                 </Toolbar>
             </AppBar>

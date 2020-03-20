@@ -6,6 +6,8 @@ export const context = {
     isAuthenticated: false,
     nightMode: false,
     language: 'en',
+    toggleNightMode: null,
+    toggleLanguage: null,
 };
 const AppContext = React.createContext(context);
 
@@ -14,5 +16,7 @@ context.PropTypes = {
     isAuthenticated: PropTypes.bool,
     nightMode: PropTypes.bool,
     language: PropTypes.string,
+    toggleNightMode: PropTypes.func,
+    toggleLanguage: PropTypes.func,
 };
 export default AppContext;
