@@ -8,6 +8,8 @@ export const context = {
     language: 'en',
     toggleNightMode: null,
     toggleLanguage: null,
+    login: null,
+    logout: null,
 };
 const AppContext = React.createContext(context);
 
@@ -18,5 +20,7 @@ context.PropTypes = {
     language: PropTypes.string,
     toggleNightMode: PropTypes.func,
     toggleLanguage: PropTypes.func,
+    login: PropTypes.func,
+    logout: PropTypes.func,
 };
 export default AppContext;

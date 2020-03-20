@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import { useTranslation } from 'react-i18next';
 import LanguageMenu from './LanguageMenu';
 import ThemeMenu from './ThemeMenu';
+import AppContext from '../../context/AppContext';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -26,6 +27,7 @@ const useStyles = makeStyles(theme => ({
 export default function Header() {
     const classes = useStyles();
     const { t } = useTranslation();
+    const { login, isAuthenticated, logout } = useContext(AppContext);
 
     return (
         <div className={classes.root}>
@@ -36,7 +38,15 @@ export default function Header() {
                     </Typography>
                     <LanguageMenu />
                     <ThemeMenu />
-                    <Button color="inherit"> {t('login')}</Button>
+                    {isAuthenticated ? (
+                        <Button color="inherit" onclick={logout}>
+                            {t('logout')}
+                        </Button>
+                    ) : (
+                        <Button color="inherit" onclick={login}>
+                            {t('login')}
+                        </Button>
+                    )}
                 </Toolbar>
             </AppBar>
         </div>

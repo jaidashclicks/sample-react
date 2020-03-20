@@ -186,7 +186,7 @@ ReactDOM.render(
 to show translated text use
 
 ```js
-import React, { Suspense } from 'react';
+import React from 'react';
 const { t } = useTranslation();
 
 t('app_name');
@@ -380,3 +380,27 @@ import SnackBar from '../../common/snackbar/SnackBar';
     horizontal="right"
 />;
 ```
+
+# Authentication using Firebase Auth
+
+before you start using firebase install firebase cli globally
+
+```bash
+yarn add  --global firebase-cli
+```
+
+now configure firebase
+
+```bash
+firebase login
+```
+
+## start using firebase
+
+```bash
+firebase init
+```
+
+# Firebase functions Api setup
+
+# Firebase Hosting setup

@@ -25,6 +25,8 @@ export default function LanguageMenu() {
         i18n.changeLanguage(lng);
         // update context
         toggleLanguage(lng);
+        // uncomment this if you want to close language slection after user selects a language
+        // handleClose();
     };
 
     return (
