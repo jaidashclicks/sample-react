@@ -1,20 +1,22 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-
 import { SnackbarProvider } from 'notistack';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Loading from './common/loader/CircularProgress';
 //initilize i18n
 import './i18n';
+// Error Boundary
+import ErrorBoundary from './errorboundary/ErrorBoundary';
 
 ReactDOM.render(
     <Suspense fallback={<Loading />}>
-        <SnackbarProvider maxSnack={3}>
-            <App />
-        </SnackbarProvider>
+        <ErrorBoundary>
+            <SnackbarProvider maxSnack={3}>
+                <App />
+            </SnackbarProvider>
+        </ErrorBoundary>
     </Suspense>,
-
     document.getElementById('root'),
 );
 

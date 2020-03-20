@@ -5,7 +5,7 @@ This a fully featured sample create react app. Real world application and uses s
 # Features
 
 -   [Material UI](https://material-ui.com/)
--   Notifications using [Notostack](https://iamhosseindhv.com/notistack/)
+-   Notifications using [Notistack](https://iamhosseindhv.com/notistack/)
 -   i18n using [react i18next](https://github.com/i18next/react-i18next) . Just deine your language json messages and start using
 -   Firebase Authentications and Functions
 -   Firebase functions using express js
@@ -190,4 +190,40 @@ import React, { Suspense } from 'react';
 const { t, i18n } = useTranslation();
 
 t('app_name');
+```
+
+# Code splitting / Lazy loading
+
+## a normal module import
+
+for a normal import you can use import()
+
+```js
+import('./test').then(test => {
+    // do something
+});
+```
+
+## b React.lazy()
+
+```js
+import React from 'react';
+const Test = React.lazy(() => import('./test'));
+```
+
+Note: as React.lazy does not support server side rendering as it uses suspense and suspense is not supported yet on server side we can use a third party package [Loadable Component](https://github.com/gregberge/loadable-components)
+
+## Loadable Component
+
+```bash
+
+yarn add @loadable/component
+```
+
+Uses
+
+```js
+import Lodable from '@lodable/component';
+
+const Test = Loadable(() => import('./Test'));
 ```
